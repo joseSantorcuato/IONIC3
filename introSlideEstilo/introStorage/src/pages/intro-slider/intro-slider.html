@@ -1,0 +1,66 @@
+<!--
+  Generated template for the IntroSliderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides [pager]="true" class="swipe-intro">
+      <ion-slide >
+          <h1>Gracias por instalar Ubuntu mobile 16.04 LTS</h1>
+      </ion-slide>
+
+
+      <ion-slide>
+          <h1>Nuevas características:</h1>
+          <h4>Integración Google Cloud Platform</h4>
+
+
+      <ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-img width="200" height="200" style="background-color: transparent;"src="assets/imgs/google.png"></ion-img>
+    </ion-col>
+     </ion-row>
+     </ion-grid>
+
+
+
+      </ion-slide>
+
+
+
+      <ion-slide>
+
+          <h1>Estamos preparados...¿Tú?</h1>
+          <div class="intro-slider-checkbox">
+
+               <p>¿Mostrar esta intro otra vez?</p>
+               <ion-grid>
+           <ion-row>
+<ion-col col-2 >
+</ion-col>
+<ion-col col-2 >
+</ion-col>
+              <ion-col col-2 >
+               <div class="centrado"><ion-toggle color="light" [(ngModel)]="options.showNextTime"></ion-toggle></div>
+             </ion-col>
+
+              </ion-row>
+              </ion-grid>
+               <br/>
+               <!--<a (click)="complete()">Run the App!</a> -->
+               <button  ion-button class="ubuntu" block (click)="complete()">Comenzar</button>
+           </div>
+      </ion-slide>
+  </ion-slides>
+</ion-content>

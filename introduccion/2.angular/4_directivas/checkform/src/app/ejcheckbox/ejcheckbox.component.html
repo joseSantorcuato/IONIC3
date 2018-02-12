@@ -1,0 +1,6 @@
+<div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox"  name="presionado" [(ngModel)]="presionado" class="form-check-input"> {{texto}}
+        </label>
+        <label *ngIf="presionado" class="animate-if">Checkbox presionado</label>
+      </div>

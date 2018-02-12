@@ -1,0 +1,9 @@
+ h3 {
+   text-align: center;
+
+   color: grey;
+ }
+.img-fluid {
+
+  filter: blur(2px);
+}
