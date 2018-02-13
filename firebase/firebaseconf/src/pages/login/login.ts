@@ -31,8 +31,14 @@ export class LoginPage {
   signin(){
     this.auth.registerUser(this.user.email,this.user.password)
     .then((user) => {
-      // Uusario creado, podria mostrar modal
+      let alert = this.alertCtrl.create({
+        title: 'Usuario registrado',
+        subTitle: "Ingreso exitoso",
+        buttons: ['Aceptar']
+      });
+      alert.present();
     })
+  
     .catch(err=>{
       let alert = this.alertCtrl.create({
         title: 'Error',
