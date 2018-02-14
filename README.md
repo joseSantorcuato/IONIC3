@@ -5,4 +5,6 @@
 - Introducción: Instalación, Angular, Typescript
 - IntroSlideEstilo: Creación de tabs, pages e intro app, storage
 - Providers: Servicios REST, webservice, consumo apis
-- Firebase: configuración bbdd Google, no Sql. Login.
+- Firebase: configuración bbdd Google, no Sql. Login
+- Notificaciones al móvil con Firebase Google
+- CRUD Cloud computing Firebase Google, cámara. SET,UDPATE,DELETE.
