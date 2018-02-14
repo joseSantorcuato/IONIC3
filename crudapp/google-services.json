@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1079244719846",
+    "firebase_url": "https://logincrud.firebaseio.com",
+    "project_id": "logincrud",
+    "storage_bucket": "logincrud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079244719846:android:302bd723d4576b43",
+        "android_client_info": {
+          "package_name": "com.crudapp.mus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079244719846-h0evoa5bfl8s4al6lsbqr0o5u7pe4v4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ1IWfSbhNlOJpOWAITFGpOGwnYuI8468"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
