@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
 import { FirebaseDbProvider } from '../../providers/firebase-db/firebase-db';
 
 /**
@@ -16,7 +16,7 @@ import { FirebaseDbProvider } from '../../providers/firebase-db/firebase-db';
 })
 export class ListadoPage {
 estudiantes: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public dbFirebase: FirebaseDbProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public dbFirebase: FirebaseDbProvider, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -31,4 +31,31 @@ estudiantes: any;
       'ModalDetalleEstudiantePage', estudiante);
       modalEstudiante.present();
   }
+
+  borrarEstudiante(id){
+
+   let alert = this.alertCtrl.create({
+     title: 'Confirmar borrado',
+     message: '¿Estás seguro de que deseas eliminar a este estudiante?',
+     buttons: [
+       {
+         text: 'No',
+         role: 'cancel',
+         handler: () => {
+           // Ha respondido que no así que no hacemos nada, cierra el modal lolito
+         }
+       },
+       {
+         text: 'Si',
+         handler: () => {
+              // AquÍ borramos el sitio en firebase
+             this.dbFirebase.borrarEstudiante(id);
+          }
+       }
+     ]
+   });
+
+   alert.present();
+
+}
 }

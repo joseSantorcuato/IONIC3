@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { FirebaseDbProvider } from '../../providers/firebase-db/firebase-db';
 import { AutenticaProvider } from '../../providers/autentica/autentica';
@@ -22,7 +22,7 @@ foto: any;
 edit : boolean = false;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private viewCtrl: ViewController, private camera: Camera, private dbFirebase :FirebaseDbProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private viewCtrl: ViewController, private camera: Camera, private dbFirebase :FirebaseDbProvider, private alertCtrl: AlertController) {
   this.estudiante = this.navParams.data  }
 
   ionViewDidLoad() {
@@ -78,5 +78,7 @@ edit : boolean = false;
         this.cerrarModal();
     })
    }
+
+   
 
 }

@@ -71,7 +71,7 @@ guardarEstudiante(){
 
 }
 this.dbFirebase.addEstudiante(estudiante).then(res =>{
-  console.log('Sitio guardado en firebase:');
+  console.log('Estudiante guardado en firebase:');
   this.cerrarModal();
 
 

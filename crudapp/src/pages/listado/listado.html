@@ -12,16 +12,21 @@
 
 </ion-header>
 
-
 <ion-content padding>
-  <ion-list>
-    <ion-item *ngFor ="let estudiante of estudiantes" (click) = "muestraEstudiante(estudiante)">
+<ion-list>
+  <ion-item-sliding #item *ngFor="let estudiante of estudiantes">
+    <ion-item (click)="muestraEstudiante(estudiante)">
       <ion-avatar item-start>
         <img [src]="estudiante.foto">
-      </ion-avatar>
-      <h2 >{{ estudiante.nombre }}</h2>
-      <p>{{ estudiante.carrera }} </p>
-    </ion-item >
+        </ion-avatar>
+      <h2>{{ estudiante.nombre }}</h2>
+      <p>{{ estudiante.profe }}</p>
+    </ion-item>
+    <ion-item-options side="right">
+      <button ion-button  color="danger" (click)="borrarEstudiante(estudiante.id)"><ion-icon name="trash"></ion-icon>
+         Borrar
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
 </ion-list>
-
 </ion-content>

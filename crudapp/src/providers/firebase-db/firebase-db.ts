@@ -43,4 +43,9 @@ getEstudiantes(){
     return this.afDb.database.ref('estudiantes/'+this.auth.getUser()+'/'+estudiante.id).update(estudiante)
   }
 
+  public borrarEstudiante(id){
+        this.afDb.database.ref('estudiantes/'+this.auth.getUser()+'/'+id).remove();
+
+}
+
 }
