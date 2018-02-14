@@ -13,4 +13,3 @@ Curso de desarrollo de aplicaciones móviles híbridas. Android, IOS, WIN
 - Notificaciones al móvil con Firebase Google
 - CRUD Cloud computing Firebase Google, cámara. set(), update(), remove(), list()
 - Geolocalización
--
