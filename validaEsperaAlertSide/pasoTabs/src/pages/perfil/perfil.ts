@@ -37,7 +37,7 @@ export class PerfilPage {
         {
           text: 'Si',
           handler: () => {
-            console.log('Buy clicked');
+            console.log('Preisonó ir');
             this.navCtrl.push('ListadoPage');
           }
         }

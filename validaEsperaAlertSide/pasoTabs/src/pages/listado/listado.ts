@@ -39,9 +39,8 @@ export class ListadoPage {
       }
     )
 
-    setTimeout(() => {
       loading.dismiss();
-    }, 3000);
+
 
 
 
