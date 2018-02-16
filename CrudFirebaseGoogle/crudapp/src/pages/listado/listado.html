@@ -1,0 +1,32 @@
+<!--
+  Generated template for the ListadoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Listado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  <ion-item-sliding #item *ngFor="let estudiante of estudiantes">
+    <ion-item (click)="muestraEstudiante(estudiante)">
+      <ion-avatar item-start>
+        <img [src]="estudiante.foto">
+        </ion-avatar>
+      <h2>{{ estudiante.nombre }}</h2>
+      <p>{{ estudiante.profe }}</p>
+    </ion-item>
+    <ion-item-options side="right">
+      <button ion-button  color="danger" (click)="borrarEstudiante(estudiante.id)"><ion-icon name="trash"></ion-icon>
+         Borrar
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+</ion-content>
